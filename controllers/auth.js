@@ -5,7 +5,7 @@ const User = require('../models/user');
 const authController = {
   async register(req, res) {
     const { name, email, password, adharcard, phone } = req.body;
-
+console.log(req.body)
     try {
       let user = await User.findOne({ email });
       if (user) {
