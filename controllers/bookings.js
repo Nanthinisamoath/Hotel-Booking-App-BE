@@ -27,7 +27,7 @@ const createBooking = async (req, res) => {
 const getAllBookings = async (req, res) => {
   try {
     const bookings = await Booking.find();
-
+console.log(bookings)
     res.json(bookings);
   } catch (error) {
     console.error(error);
